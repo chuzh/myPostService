@@ -20,13 +20,13 @@ exports.config = {
         },
         environments: {
             development: {
-                database: 'tphub_development'
+                database: 'posts_development'
             },
             test: {
-                database: 'tphub_test'
+                database: 'posts_test'
             },
             production: {
-                database: 'tphub'
+                database: 'posts'
             }
         }
     }

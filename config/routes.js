@@ -14,9 +14,14 @@ function postRoutes(controllers) {
     var _this = exports;
     _this.postController = controllers.postController || require(_this.controllersPath + 'post-controller')(_this.app);
 
-    _this.app.get('/api/findAllPosts',
+    _this.app.get('/api/post/findAll',
         _this.allowAnyOriginJSON,
         _this.postController.findAllPosts
+    );
+
+    _this.app.get('/api/post/findPostById/:id',
+        _this.allowAnyOriginJSON,
+        _this.postController.findPostById
     );
 }
 
